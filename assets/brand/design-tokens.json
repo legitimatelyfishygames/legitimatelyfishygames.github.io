@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "Ink": "#051B3D",
+    "Turquoise": "#10D7CE",
+    "Coral": "#FF635C",
+    "Cream": "#FFF1CB",
+    "Deep Teal": "#07889D",
+    "Surface": "#102C50",
+    "Muted": "#B2C5D5"
+  },
+  "font": {
+    "logo": "Approved custom illustrated wordmark, not an installable font",
+    "display": "Nunito Sans 900 Italic",
+    "body": "Space Grotesk"
+  },
+  "radius": {
+    "button": 14,
+    "card": 24
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "motion": {
+    "quick_ms": 160,
+    "standard_ms": 240,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "contrast": {
+    "Cream / Ink": 15.19,
+    "Ink / Turquoise": 9.45,
+    "Ink / Coral": 5.84,
+    "Muted / Ink": 9.62,
+    "Deep Teal / Cream": 3.73
+  }
+}
