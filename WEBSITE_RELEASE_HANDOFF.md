@@ -1,5 +1,7 @@
 # Website release handoff
 
+> Historical website handoff from 19 October 2026. The site is now published through GitHub Pages. For the 20 October Unity privacy reconciliation, resolved integration facts and remaining approval/device checks, use [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) and [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md). Earlier statements below about an absent Unity handoff or pre-publication status are superseded.
+
 Prepared: **19 October 2026**. Website: **Legitimately Fishy Games**. Game: **Kitchen Chaos: Idle Cooking**.
 
 **Status:** the static website is technically ready to deploy with its privacy policy explicitly marked as a draft. Local validation passed. No GitHub Pages deployment has been performed or verified as part of this handoff. The final policy is not ready for AdMob: it still awaits the Unity project's `PRIVACY_HANDOFF_WEBSITE.md` and the outstanding review decisions. Approved branding is not a publication blocker.

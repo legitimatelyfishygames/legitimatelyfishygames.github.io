@@ -4,7 +4,7 @@ A static website for **Legitimately Fishy Games** and **Kitchen Chaos: Idle Cook
 
 The game is under development and preparing for its first **closed test**. There is no supplied public Google Play destination. The privacy contact is **mati4193.004@gmail.com**.
 
-**The privacy policy remains a draft.** The Unity project's final `PRIVACY_HANDOFF_WEBSITE.md` has not been supplied. Resolve the final-build questions in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) before approving the policy for AdMob or Google Play. [WEBSITE_RELEASE_HANDOFF.md](WEBSITE_RELEASE_HANDOFF.md) records the website changes and release gates. Local files are not automatically synchronized with GitHub, and no deployment is confirmed by this README.
+**The privacy policy remains a draft.** The Unity engineering handoff of 19–20 October 2026 has been reviewed; its validation AAB is not assumed to be the final candidate. Resolve the remaining decisions and device checks in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) before approval for AdMob or Google Play. [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md) records this revision's website checks. The website is published through GitHub Pages; revised local files still require review, merge and deployment.
 
 ## Website root and structure
 
@@ -48,7 +48,7 @@ A local server may show its own error screen for missing addresses. Open `/404.h
 
 Edit the HTML directly. Keep the homepage and game page consistent with the actual app, its handoff and the current release milestone.
 
-- **Closed testing:** core idle production, local saves and offline progression, managers and random manager boxes obtained with earned currency. Optional AdMob rewarded ads, UMP and local notifications are intended for this milestone; final integration needs the Unity handoff. Real-money purchases are not required for this milestone and are not advertised as available.
+- **Closed testing:** core idle production, local saves and offline progression, managers and random manager boxes obtained with earned currency. Direct Google Mobile Ads/UMP and optional local notifications are implemented according to the Unity handoff; production advertising remains gated pending audience review and device validation. Real-money purchases are not required for this milestone and are not advertised as available.
 - **Future public release:** Google Play Billing diamond packs, purchased diamonds usable for random manager boxes, and related purchase/odds handling are a separate planned milestone. Do not turn these plans into current closed-test claims.
 - Keep the development/closed-test status until it changes. Add a store link only when the actual valid destination is supplied. Do not invent a release date, review, download count, cloud save or player account.
 - Recheck the privacy policy when app SDKs, backups, purchases, audience, providers or consent controls change. A source audit of the older Unity project does not prove the final APK's behavior.
@@ -93,7 +93,7 @@ Clone the **existing** repository into a separate folder using GitHub Desktop or
 
 ## Gates before entering the privacy URL into AdMob
 
-- Obtain the final Unity `PRIVACY_HANDOFF_WEBSITE.md` and reconcile the policy with the actual closed-test Android build, including removal of old advertising dependencies and the final AdMob/UMP behavior.
+- Use the reviewed Unity handoff and obtain final-candidate evidence; reconcile the policy with that Android build and configuration. See resolved findings and remaining device/developer checks in `PRIVACY_REVIEW.md`.
 - Complete [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md), particularly audience/teen/child handling, SDK disclosures, consent/privacy controls, backup/deletion limitations, rights and support handling. Use the supplied real contact; verify it is monitored.
 - Approve the app-specific policy, resolve public uncertainty notices and set an actual effective date only at approval. Keep future paid diamonds and paid random-box use separate from the current closed-test scope.
 - Confirm the exact HTTPS policy URL works publicly, signed out and on a mobile browser, after the successful deployment. Enter that reviewed URL into the relevant consoles and app links.
