@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#051B3D">
+  <meta name="description" content="Draft privacy policy for the planned Kitchen Chaos: Idle Cooking Android closed test, including local saves, optional ads, notifications and privacy contact.">
+  <title>Privacy policy draft · Kitchen Chaos · Legitimately Fishy Games</title>
+  <link rel="canonical" href="https://legitimatelyfishygames.github.io/games/kitchen-chaos/privacy.html">
+  <link rel="icon" href="../../assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="../../assets/brand/favicon.ico">
+  <link rel="apple-touch-icon" href="../../assets/brand/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../assets/css/brand.css">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <script src="../../assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html" aria-label="Legitimately Fishy Games home"><picture class="brand-art"><source media="(min-width: 581px)" srcset="../../assets/brand/lfg-horizontal.png" width="2400" height="1000"><img class="brand-logo" src="../../assets/brand/lfg-puffer-micro.svg" width="1110" height="750" alt="" decoding="async" fetchpriority="high"></picture><span class="brand-name">Legitimately<span>Fishy Games<span class="brand-period">.</span></span></span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation" data-navigation>
+        <a href="../../index.html">Home</a>
+        <a href="./index.html">Our game</a>
+        <a href="../../index.html#studio">The studio</a>
+        <a class="nav-privacy" href="./privacy.html" aria-current="page">Privacy policy <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="legal-main">
+    <div class="container">
+      <div class="page-intro">
+        <p class="eyebrow">Kitchen Chaos: Idle Cooking</p>
+        <h1>Privacy policy.</h1>
+        <p>A draft for the Android game being prepared for its first closed test.</p>
+        <p class="policy-meta">DRAFT · Reviewed <time datetime="2026-10-19">19 October 2026</time> · No effective date set</p>
+      </div>
+
+      <div class="review-notice" role="note" aria-labelledby="draft-heading">
+        <p class="eyebrow">Final game handoff required</p>
+        <h2 id="draft-heading">This policy is still a draft.</h2>
+        <p>The development audit and intended closed-test scope inform this page. They do not establish the contents or behavior of the final Android build. AdMob and UMP integration is being prepared, and older advertising dependencies were found in an earlier APK.</p>
+        <p><strong>Before using this as the final policy in Google Play or AdMob:</strong> verify the final SDKs and data flows, implemented consent and age handling, backup and deletion behavior, and the remaining legal and retention details. The public contact below is confirmed. All outstanding checks are in <a href="../../PRIVACY_REVIEW.md">PRIVACY_REVIEW.md</a>.</p>
+      </div>
+
+      <div class="legal-layout">
+        <aside class="legal-nav" aria-label="On this page">
+          <p class="eyebrow">On this page</p>
+          <nav aria-label="Privacy policy contents">
+            <a href="#scope">About this policy</a>
+            <a href="#local-data">Local game data</a>
+            <a href="#notifications">Optional notifications</a>
+            <a href="#advertising">Advertising &amp; SDK data</a>
+            <a href="#providers">Service providers</a>
+            <a href="#choices">Consent &amp; choices</a>
+            <a href="#support">Support emails</a>
+            <a href="#retention">Retention &amp; deletion</a>
+            <a href="#security">Security</a>
+            <a href="#international">International processing</a>
+            <a href="#rights">Your privacy rights</a>
+            <a href="#children">Children &amp; teenagers</a>
+            <a href="#future-payments">Future paid purchases</a>
+            <a href="#website">This website</a>
+            <a href="#contact">Contact &amp; updates</a>
+          </nav>
+        </aside>
+
+        <article class="legal-content" aria-label="Draft privacy policy for the intended closed test">
+          <section id="scope">
+            <h2>1. About this policy</h2>
+            <p><strong>Legitimately Fishy Games</strong> is developing <strong>Kitchen Chaos: Idle Cooking</strong> for Android distribution through Google Play. The game is under development and preparing for its first closed-testing release. This draft concerns that intended closed test, rather than announcing an available release.</p>
+            <p>The intended scope includes local saves and offline progression, manager collection and random manager boxes obtained with earned in-game currency, optional rewarded advertising, consent handling and optional local notifications. Planned future real-money purchases are addressed separately in <a href="#future-payments">section 13</a>.</p>
+            <p>The developer-provided audit found no developer-operated player account or cloud-save server. It describes the project before the advertising replacement and does not prove that the final app has no online processing. Additional legal identity or location details required for publication still need review; the studio name does not imply a registered company.</p>
+          </section>
+
+          <section id="local-data">
+            <h2>2. Locally stored game data</h2>
+            <p>The development audit identified local JSON save files containing gameplay progression, manager inventory, random-box state, in-game currency state and settings. Local saves support continuing a game and offline progression. The project also creates backup and migration copies of save files.</p>
+            <p>These app-created local copies are distinct from any backup or device-transfer service managed by Android. Depending on the final app configuration, operating system and device settings, Android may include app data in backup or transfer. The actual rules have not yet been confirmed. See <a href="https://developer.android.com/identity/data/autobackup">Android's backup information</a>.</p>
+            <p><strong>Before finalization:</strong> verify the final save contents, locations, backup rules and deletion behavior. Local storage must not be described as proof that all app data stays on the device, because advertising and other native components may process information separately.</p>
+          </section>
+
+          <section id="notifications">
+            <h2>3. Optional local notifications</h2>
+            <p>The audited project includes optional local quest notifications, and local notifications are in the intended closed-test scope. These are device-scheduled reminders. The final notification package, scheduling data, stored preferences and cancellation behavior still need verification.</p>
+            <p>Where Android requires notification permission, notifications depend on that permission. Android's app notification settings allow you to control notifications; the exact system wording varies by device. See <a href="https://developer.android.com/develop/ui/compose/notifications/notification-permission">Android's notification permission guidance</a>. The final in-game opt-in and opt-out controls must be tested before their steps are described here. This draft does not establish that the notification package has no other data processing.</p>
+          </section>
+
+          <section id="advertising">
+            <h2>4. Planned advertising and SDK information</h2>
+            <p>The closed-test plan includes optional <strong>Google AdMob rewarded advertisements</strong> and <strong>Google User Messaging Platform (UMP)</strong> consent handling. Development testing is intended to use Google Mobile Ads test-ad arrangements; see <a href="https://developers.google.com/admob/unity/test-ads">Google's test ad guidance</a>. Test ads do not establish that SDK requests contain no personal information.</p>
+            <p>Google's <a href="https://developers.google.com/admob/unity/privacy/play-data-disclosure">Mobile Ads Unity data disclosure</a> identifies the following categories for its documented SDK behavior:</p>
+            <ul>
+              <li><strong>IP address:</strong> potentially used to infer approximate location.</li>
+              <li><strong>Device identifiers:</strong> advertising ID, app set ID and applicable device/account identifiers.</li>
+              <li><strong>Interactions:</strong> app activity and advertising interactions, including taps and video views.</li>
+              <li><strong>Diagnostics:</strong> app and SDK performance information.</li>
+            </ul>
+            <p>Google describes advertising, analytics and fraud prevention as purposes. Actual processing depends on the installed versions, native dependencies, configuration and applicable choices. The final integration must be checked before these categories become app-specific disclosures. The studio's lack of direct access to individual SDK records would not mean that no personal information is processed.</p>
+            <p><strong>Unresolved dependency change:</strong> an older APK contained Unity LevelPlay / Unity Ads dependencies. Their replacement with direct AdMob and UMP is being handled in the game project. Removal has not been proven for the final build, and the provider list cannot yet be treated as complete.</p>
+          </section>
+
+          <section id="providers">
+            <h2>5. Relevant service providers</h2>
+            <p>Google is the planned advertising and consent provider. Google's partner-app information explains processing for advertising delivery, measurement, service operation and abuse prevention, with personalization depending on applicable settings and choices. Read <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+            <p>Gmail handles messages sent to the contact address, as explained in <a href="#support">section 7</a>. GitHub Pages is the intended website host, as explained in <a href="#website">section 14</a>. Android-managed backup, if enabled for the final build, is separate from a developer-operated cloud-save service.</p>
+            <p><strong>Final provider review required:</strong> inventory all Unity, Android and advertising packages, transitive dependencies, mediation or other partners, analytics and crash-reporting components. Source inspection alone did not conclusively establish native SDK data processing. This draft does not assert that legacy services were removed or that Google is the app's only recipient.</p>
+          </section>
+
+          <section id="choices">
+            <h2>6. Advertising consent and privacy choices</h2>
+            <p>UMP is intended to show applicable regional privacy messages and determine when advertisements may be requested. Google's <a href="https://developers.google.com/admob/unity/privacy">Unity UMP guidance</a> calls for a privacy options entry point when required.</p>
+            <p><strong>The actual controls remain unverified.</strong> Before finalization, the game handoff must confirm the consent flow, settings and age handling, any required option to revisit choices, the exact control name and location, and what happens after a change. This draft does not promise an implemented withdrawal button or provide an invented sequence of taps.</p>
+            <p>Declining personalized advertising does not necessarily stop all advertising-related data processing. Choosing to view a rewarded ad is not blanket consent to every use of personal information. Android also provides advertising ID controls, subject to device and version; these do not replace applicable in-app choices.</p>
+          </section>
+
+          <section id="support">
+            <h2>7. Emails and privacy enquiries</h2>
+            <p>If you voluntarily email <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a>, the studio receives the sender address, message content, and any name, attachments or other information you include. These messages are handled through Gmail. We use information you send to respond to your enquiry, provide support or address a privacy request.</p>
+            <p>Please include only information relevant to the enquiry. Sending an email is separate from playing the game or reading this website. Google's privacy policy explains its handling of Gmail information. The studio's email retention criteria and request-handling procedure still need to be finalized; no fixed retention period is promised in this draft.</p>
+          </section>
+
+          <section id="retention">
+            <h2>8. Retention, backups and deletion</h2>
+            <p>Local saves are used to maintain game progress and settings. The final behavior for save backups, migration copies and removal has not been verified. <strong>Do not assume that New Game erases all copies, or that uninstalling removes every backup.</strong> Android-managed backups, restored data and information held by providers may have separate lifecycles.</p>
+            <p>The final policy must explain verified ways to remove local data, what remains after each action, and any limitations involving Android backup or device transfer. A support email cannot by itself establish that the studio can access or remotely erase a local save. You can contact the studio to request information or exercise applicable rights.</p>
+            <p>Google's <a href="https://policies.google.com/technologies/retention">retention information</a> explains that retention varies with the information and purpose. Deletion from Google or other providers cannot be promised to be immediate. Retention periods or criteria for studio-held support messages, reports and any other information must be confirmed before final publication.</p>
+          </section>
+
+          <section id="security">
+            <h2>9. Security</h2>
+            <p>The final build's storage, access and transmission protections still require verification. This draft does not claim that every save file or all app data is encrypted. A provider's protection of its own traffic is not evidence of protections across the whole game. No storage system or transmission method can be guaranteed to be completely secure.</p>
+          </section>
+
+          <section id="international">
+            <h2>10. International processing</h2>
+            <p>Google describes processing on servers in multiple countries, potentially outside a user's country, in its <a href="https://policies.google.com/privacy#datatransfers">data transfers information</a>. This is relevant to planned advertising services and to enquiries handled through Gmail.</p>
+            <p><strong>To confirm:</strong> the developer's location, release regions, final providers, transfer arrangements and any required safeguards or disclosures. This draft does not promise a particular storage country or a transfer mechanism for the whole app.</p>
+          </section>
+
+          <section id="rights">
+            <h2>11. Your privacy rights</h2>
+            <p>Depending on your location and applicable law, you may have rights to request access, correction, deletion or a copy of personal information, restrict or object to processing, or withdraw consent where processing relies on it. You may also have a right to complain to the relevant data protection authority. Conditions and exceptions can apply; the <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/">ICO's individual rights guidance</a> is one regional reference.</p>
+            <p>To ask a question or make a request, email <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a>. Describe the request and information concerned. Any identity check should be proportionate to the request. Provider-held data may also require using the provider's controls or contact routes. The applicable legal grounds, regional rights, response process and limits of studio access remain subject to final review.</p>
+          </section>
+
+          <section id="children">
+            <h2>12. Children and teenagers</h2>
+            <p><strong>The final target audience and age handling have not been confirmed.</strong> No assertion is made that the game is directed to children, exclusively for adults, or suitable for every teenager. A proposed “13+” audience would not settle all regional child privacy or age-of-consent requirements.</p>
+            <p>The developer must confirm the actual age groups and countries, relevant Google Play audience declarations, advertising restrictions, any required age handling or parental involvement, and the approach to children's data. Google's <a href="https://support.google.com/googleplay/android-developer/answer/9867159">target audience guidance</a> notes that some teenage age groups may include children in some locations. These decisions remain publication blockers.</p>
+          </section>
+
+          <section id="future-payments">
+            <h2>13. Future production purchases</h2>
+            <p><strong>Real-money purchases are a separate future production milestone.</strong> The closed-test scope uses earned in-game currency for existing random manager boxes; real-money purchases are not required for that milestone. The supplied audit found no real Google Play Billing integration.</p>
+            <p>The future plan is Google Play Billing diamond packs, with purchased diamonds usable for random manager boxes. This is not a claim that payments are implemented or available. Before any paid version is offered, the policy and other required disclosures must address the actual purchase processing, verification, recovery, relevant transaction data and applicable random-reward odds disclosures. Those details are not established by this draft.</p>
+          </section>
+
+          <section id="website">
+            <h2>14. This studio website</h2>
+            <p>This static website has no advertising scripts, analytics scripts, third-party tracking widgets or tracking cookies installed by Legitimately Fishy Games. The policy is ordinary HTML and requires no login or cookie acceptance to read. Visiting this website does not load the game's advertising SDKs.</p>
+            <p>The intended host is GitHub Pages. GitHub documents logging and storage of visitor IP addresses for security, including for visitors who are not signed in. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Hosting and browser infrastructure may process visitor information even without studio-installed tracking. External links lead to services with their own practices.</p>
+          </section>
+
+          <section id="contact">
+            <h2>15. Contact and policy updates</h2>
+            <p><strong>Developer/studio:</strong> Legitimately Fishy Games<br><strong>Public privacy contact:</strong> <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a></p>
+            <p>This contact is available for support and privacy enquiries. Additional legal identity or business details required for publication must be confirmed rather than invented.</p>
+            <p>The date above records this draft's review, not a release or effective date. The policy must be reconciled with the final game handoff and approved before it becomes a final statement. It should be reviewed when SDKs, data practices, audience or release scope change. An effective date and any required process for notifying material changes will be set when the final policy is approved.</p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="../../index.html"><img class="footer-mark" src="../../assets/brand/lfg-puffer-micro.svg" width="1110" height="750" alt="" loading="lazy" decoding="async"><span class="footer-wordmark">Legitimately Fishy Games<span>.</span></span></a>
+      <p>Little worlds. A little mischief.</p>
+      <div class="footer-links"><a href="./index.html">Kitchen Chaos</a><a href="./privacy.html" aria-current="page">Privacy policy</a><span>© 2026</span></div>
+    </div>
+  </footer>
+</body>
+</html>
