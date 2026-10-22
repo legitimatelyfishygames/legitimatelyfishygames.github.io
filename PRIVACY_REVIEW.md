@@ -1,75 +1,55 @@
-# Privacy review — Kitchen Chaos: Idle Cooking
+# Kitchen Chaos privacy review and release checklist
 
-Reviewed: **20 October 2026**. **DRAFT — engineering handoff reconciled; final candidate, device testing and developer decisions outstanding. Not approved for final Google Play or AdMob submission.** No effective date is set.
+Updated: **22 October 2026**. The public policy is finalized for publication on the owner's instructions. This is a website/policy review, not legal approval, an Android build audit or certification of Play Console declarations.
 
-Policy URL: <https://legitimatelyfishygames.github.io/games/kitchen-chaos/privacy.html>. The website is published through GitHub Pages. These corrections require review, merge and deployment. The handoff's earlier 404 observation is historical, not a finding about the updated deployment.
+## Evidence and resolved corrections
 
-## Primary technical evidence and limits
+The owner confirmed the following on 22 October 2026, superseding conflicting 19–20 October draft/handoff statements:
 
-The complete **PRIVACY_HANDOFF_WEBSITE.md**, prepared 19–20 October 2026 in the Unity project, is the primary app-specific source, supplied from `KitchenChaosIdleFactory/PRIVACY_HANDOFF_WEBSITE.md`. It supersedes the older paid-launch/pre-integration audit for this closed test. Its statements are engineering evidence, not legal approval or authorization for unrelated website actions.
+- Google Play target audience: **18+ only**. No teenage audience or worldwide availability is inferred.
+- Current closed-test targets: **UK, Poland, US, New Zealand**; final public-release territories remain undecided.
+- **AdMob rewarded ads and Google UMP are integrated**, including applicable user privacy choices.
+- **Google Play Billing / Unity IAP is integrated for six diamond packs**. Real-money checkout is disabled pending product configuration and testing. It is incorrect to say Billing is absent.
+- Diamonds can buy random manager chests. Purchased diamonds can do so when payments are enabled; reward odds must be disclosed before relevant paid purchases.
+- Saves are local; **Reset Progress** exists. There is no player account system or proprietary cloud-save service. No complete deletion of backups/provider records is promised.
+- Public contact: **mati4193.004@gmail.com**.
 
-The handoff reports source inspection plus manifest/dependency and derived-APK DEX inspection of a new non-development **validation AAB**. We reviewed the handoff, not the underlying artifact or its separate `CLOSED_TEST_IMPLEMENTATION.md` report. Do not assume the validation AAB is the final candidate. Source/controller tests and packaging inspection do not prove live SDK processing, every network path, phone consent behavior or production account configuration.
+The existing website/earlier handoff supports local recovery/migration/pre-reset copies, optional local notifications, and Options → Ad privacy choices when UMP requires it. No current game files, AAB, device, Play Console, AdMob account or mailbox were inspected in this task. SDK-version and runtime claims in the old draft were removed rather than presented as final-build evidence. No game project was modified.
 
-## Resolved findings from the handoff
+## Official documentation checked
 
-These are recorded findings, not outstanding requests to repeat the old audit:
+- [AdMob Unity disclosure](https://developers.google.com/admob/unity/privacy/play-data-disclosure) and [Android disclosure](https://developers.google.com/admob/android/privacy/play-data-disclosure): SDK collection/sharing includes IP-derived general location, interactions, diagnostics and device/account IDs for advertising, analytics and fraud prevention. The Android page currently identifies version 25.5.0; version-match the distributed app.
+- [UMP Unity](https://developers.google.com/admob/unity/privacy): refresh consent, show applicable forms, check ad eligibility and provide privacy options when required. Optional viewing does not establish optional SDK data collection.
+- [Google Play data use](https://business.safety.google/privacy/google-services/play/): platform processing can include crash reports. This supports a separate crash-log disclosure, not attributing every crash to AdMob.
+- [Unity IAP privacy](https://docs.unity.com/en-us/iap/privacy-and-consent): data handling changes by package version. Unity distinguishes versions before 5.4 from 5.4+ and enabled services. Do not infer no collection from disabled checkout or copy D2C/webshop behavior into a native-store-only integration.
+- [Google Play Data safety](https://support.google.com/googleplay/android-developer/answer/10787469): include third-party SDK flows and distinguish local-only data, actual off-device collection, sharing exceptions and optionality.
+- [Google Play payments](https://support.google.com/googleplay/android-developer/answer/9858738): disclose randomized-item odds before and close to the relevant purchase.
 
-| Topic | Finding and evidence scope |
-| --- | --- |
-| Identity | Legitimately Fishy Games; Kitchen Chaos: Idle Cooking; **mati4193.004@gmail.com**; intended package `com.legitimatelyfishygames.kitchenchaos`. Historical prototypes use `com.kitchenchaos.idlefactory.prototype` and separate data. No company registration/address inferred. |
-| SDKs | Unity 6000.4.6f1; Google Mobile Ads Unity 11.6.0 with UMP Unity bridge; native GMA 25.5.0 and UMP 4.0.0 resolved/present in the reported validation artifact; Unity Mobile Notifications 2.4.3; External Dependency Manager 2.1.0 for Editor/build resolution. |
-| Previous ad stack | LevelPlay 9.5.1, adapter and hook removed from source. Old ironSource/LevelPlay/Unity Ads packages, native dependencies and startup components absent in the reported validation artifact. Historical APKs retain them; this does not establish final-candidate absence. |
-| Native support | Google ads-identifier 18.0.0, appset 16.0.1 and measurement support remain. Reported manifest includes Internet/network state, advertising ID, Ad Services ID/attribution/topics, Wake Lock/Foreground Service support, internal signature receiver permission and optional notifications. No Billing, GPS, camera, microphone, contacts or broad storage permission appears in that artifact. Permissions do not prove actual access/traffic. |
-| Services | No extra mediation, standalone analytics/crash upload, developer account/cloud save/custom backend or remote push service introduced; no authored endpoint receives gameplay saves. Advertising measurement is separate from these scoped findings. |
-| Consent code | Launch refreshes UMP, shows a required form and checks `CanRequestAds()` before initialization/request/show. Refusal is not unrestricted non-personalized-ad permission; partial choices and valid prior-session permission during errors remain SDK decisions. No game-owned consent cache replaces UMP. |
-| Player controls | Options includes policy browser link and **Ad privacy choices**, visible/interactable when UMP requires it. Changes invalidate cached/in-flight ads. Implemented code; regional phone behavior remains untested. Reset/defaults do not erase provider records. |
-| Rewards | Genuine client callback grants at most once to original saved destination; closing/failure/no-fill/offline grants none. No developer server-side verification endpoint; receipt IDs are not AdMob user IDs/custom verification data. Device behavior still needs testing. |
-| Activation | Development Android and validation/test-inventory AABs use official rewarded test unit; desktop TEST AD is simulation. Ordinary production compilation selects owner's rewarded unit, but `audienceReviewed=false` blocks production advertising pending owner review/device validation. |
-| Local persistence | Readable JSON stores progression, economy, managers, chest/pity/committed outcomes, claims and offline state; options separate. Local run/opening/ad-attempt IDs/reservations support idempotency. Throughput samples have no authored telemetry sender; notebook search text is transient with no authored persistence/upload found. |
-| Backups/reset | Atomic validated replacement, recovery `.bak`, immutable migration `.before-...json`, timestamped New Game pre-reset copies. New Game retains options/backups; ascension retains permanent progression; Restore defaults changes settings. No comprehensive Delete local data or age/count pruning. No fixed retention or complete deletion promised. |
-| Android backup | No explicit authored backup/transfer rules configured in this work. Eligible files/SDK preferences may be included under defaults/account/device conditions. Not developer cloud save or guaranteed recovery. |
-| Security | Unkeyed SHA-256 is corruption checking, not encryption/protection against malicious edits. Every SDK transmission path has not been verified. |
-| Notifications | Optional, **off by default**, local quest forecast/reminder. Enable requests permission; code cancels on disable/resume. Lock screen may show products/masked recipes. No FCM/push-token integration added; device behavior awaits testing. |
-| Economy | Earned currencies and manager chests, including chests bought with earned diamonds. No real Billing, money charged or Play purchase tokens; release UI omits paid prices/checkout/test grants. TEST FREE packs are development tools. Paid diamond packs/purchased diamonds for random chests belong to future Milestone B. |
+## Release checklist and unresolved factual questions
 
-## Remaining developer decisions and operational/legal review
+- [x] Review the existing public website policy against owner-confirmed current features; replace outdated audience, billing and reset statements and use the confirmed contact.
+- [x] Keep current testing territories separate from the future release footprint.
+- [x] Describe interactions, diagnostics, identifiers, approximate location and possible crash logs without promising no collection or global deletion.
+- [ ] **Each publishing cycle:** compare the game, SDKs/services, ads, purchases, permissions, data collection/sharing/retention, accounts/deletion and intended audience against current website policies; resolve any new gaps before submission.
+- [ ] Match the distributed AAB's actual SDK versions, permissions, initialization and enabled services to policy and Data safety declarations. In particular, confirm **Unity IAP version**, native-store/D2C configuration and any initialization-time IDs, device/session/country data or analytics connections. If additional flows exist, update the public disclosure before that build is distributed. The current conditional IAP paragraph is not a verified inventory.
+- [ ] Identify the actual crash-log path and SDK/platform, whether it runs automatically or depends on user settings, recipients, purposes, sharing and retention. Do not add Crashlytics or another crash service to the policy without evidence.
+- [ ] Test UMP in UK/EEA and applicable US configurations, refusal/partial choices, reopening choices, offline/error paths, and actual ad/identifier traffic. Do not assume every player is age-verified because Play targets 18+.
+- [ ] Confirm Reset Progress's current effects on main save, settings, backups and purchase/claim ledgers; test Android Clear storage, reinstall, backup/restore and transfer before making stronger deletion/recovery claims.
+- [ ] Confirm notifications, public policy link and privacy controls on Android.
+- [ ] Reconcile actual Play Console Data safety collection/sharing, purposes, optionality, encryption/deletion answers, audience, ads, content rating and territories with the same build. No Console declarations were edited here.
 
-- [ ] Decide age groups and countries, including proposed ages 13–15, 16–17 and adults, and below-consent/unknown-age handling. No age screen, birth-date collection or verified-adult status exists. Development teen treatment/T content cap and UMP under-consent=false do not establish regional classification. Keep production gated until approved; determine needed code changes/parental protections.
-- [ ] Review version-matched provider disclosures, final AdMob messages/account configuration, identifier settings and runtime evidence. Finalize Data safety categories, recipients, purposes, optionality, sharing exceptions and security/deletion answers. Optional ad viewing does not establish optional SDK processing; lack of developer access does not mean no personal data.
-- [ ] Decide whether Android cloud-backup/device-transfer rules, bounded backup retention or comprehensive local deletion need implementing before this release. Record chosen scope and tested limits. These planned features are neither completed nor assumed mandatory for the closed test by this review.
-- [ ] Confirm required developer identity/location disclosures, applicable legal grounds, regional rights/complaint routes, international processing and safeguards. Do not infer UK establishment from timezone or copy Google's legal basis as the studio's assessment.
-- [ ] Confirm inbox monitoring/access, proportionate request checks, applicable response deadlines, provider referral/escalation and support-email/attachment retention criteria. Gmail/mailbox workflow was not inspected. Define what the developer can access/erase without promising provider-wide erasure.
-- [ ] Review closed-test random-chest odds/contents, audience/territory and content-rating disclosures. Existing UI is not certified probability evidence or approval for paid random rewards.
-- [ ] Reconcile policy, in-game controls/link, Play ads/audience/content-rating/Data safety declarations and AdMob configuration against the same approved candidate. Approve text, set effective date and establish change-review/notice process only after outstanding work is resolved.
+## Purchase activation — exact wording to change
 
-## Remaining final-candidate evidence
+- [ ] Configure and test all six products, charge/fulfilment/failure/pending/refund paths and duplicate prevention. Verify which product IDs, receipts/tokens/order IDs and statuses reach the game, Google, Unity or any other recipient, and their retention. Do not promise recovery of consumable diamonds without evidence.
+- [ ] Validate reward odds and make disclosures clearly visible before and close to the paid purchase leading to random manager rewards, including diamond-pack purchases. A privacy-policy sentence alone does not satisfy this. Review territory-specific consumer/random-reward rules.
+- [ ] **Replace section 13's paragraph beginning “Current purchase status (22 October 2026)”** with the true activation status. Remove the instruction to update that wording from section 15 once done; update the effective/updated date.
+- [ ] Verify the “When purchases are enabled” transaction paragraph against the implemented flow and adjust any fields/recipients. Update website game/home payment-status copy and Data safety answers at the same time.
 
-- [ ] Identify actual closed-test candidate: package, version name/code, timestamp, filename and hash. Obtain implementation report, merged manifest and resolved dependency/code inventory; match SDK versions, legacy absence, permissions/startup components, backup rules and lack of Billing to that artifact. Do not substitute the validation AAB for this decision.
-- [ ] Verify final build flags, audience guard, test/production inventory and absence of unintended debug geography/reset settings. Record approved closed-test inventory and criteria for any production activation.
+## Unresolved legal and operational questions
 
-## Remaining Android device checks
+- [ ] Confirm the controller's required legal identity/contact-location disclosures, establishment, legal grounds for each purpose and any regional representative requirements; the studio name is not evidence of company registration.
+- [ ] Confirm applicable international-transfer arrangements and safeguards for studio-controlled processing. Provider privacy-policy links are not a studio-specific legal assessment.
+- [ ] Define and operate support-mail/attachment retention criteria, inbox monitoring and privacy-request verification, response deadlines and provider coordination. The policy provides a contact and scope limits; it does not invent a fixed period or verified deletion workflow.
+- [ ] Confirm applicable regional privacy/advertising and random-reward obligations for the selected territories before submission/activation. An 18+ target does not resolve all such obligations.
 
-Use appropriate test inventory; record build identity, device/OS, region/test settings, results and evidence limits. Simulated/controller tests are not physical-device evidence.
-
-- [ ] Test fresh/returning/expired consent, every offered choice, regions and offline/error paths including valid prior-session eligibility. Check initialization/request gating, conditional **Ad privacy choices**, reopening/changing choices and invalidating ads; verify policy browser link.
-- [ ] Inspect scoped cold-start, pre-choice, refusal/opt-out, ad request/view and privacy-change traffic/identifier access. Record services and supported categories; leave encrypted payloads/unobserved paths uncertain. Do not claim all SDK flows or every transmission protection verified.
-- [ ] Test real client reward callbacks, closing/failure/no-fill/offline and stale/in-flight ads against original saved transactions; verify at-most-once grants on device.
-- [ ] Exercise New Game, ascension and Restore defaults against main/options/recovery/migration/pre-reset files. Test Clear storage, uninstall/reinstall, Android backup/restore and device transfer under relevant OS/account/device conditions before publishing deletion/recovery instructions.
-- [ ] Test notifications initially off, opt-in, permission denial/revocation, reminder text/lock screen, disable/resume cancellation and reset/reinstall effects. Verify notification permission is independent of ad consent.
-- [ ] After merge/deployment, test exact revised HTTPS policy signed out in an Android browser and via game Options: readable without login/cookie gate, correct draft, assets/navigation working. Local responsive checks do not prove on-phone behavior or revised deployment.
-
-## Separate future payment milestone
-
-Before activating paid diamond packs, review actual Billing flow/version, transaction IDs/tokens, verification, acknowledgement/consumption, durable fulfilment/recovery/refunds and retention; assess purchased diamonds for random chests, age/territory/purchase protections and odds/consumer disclosures; update policy/platform declarations. These are future activation gates, not claims that payments exist or requirements to implement payments in the closed test.
-
-## Website validation and approval
-
-The confirmed contact and appropriate Google links remain. Branding, CSS, JavaScript and site structure are preserved. The static site has no studio-added analytics, ad scripts, tracking widgets/cookies; hosting/browser connections and voluntary email remain separate processing. See [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md) for checks and publication limits.
-
-An accessible draft URL is not approval. **Not ready for final approval or AdMob submission** while the decisions, final-candidate review and Android checks above remain open.
-
-## Official references
-
-Rechecked **20 October 2026**: [Mobile Ads disclosure](https://developers.google.com/admob/unity/privacy/play-data-disclosure), [UMP Unity](https://developers.google.com/admob/unity/privacy), [Android Auto Backup](https://developer.android.com/identity/data/autobackup). These explain providers/platforms, not independent proof of game behavior. The Mobile Ads disclosure is maintained for the latest SDK; preserve version/configuration matching for final declarations.
-
-Additional references: [test ads](https://developers.google.com/admob/unity/test-ads), [Google partner apps](https://policies.google.com/technologies/partner-sites), [Google privacy](https://policies.google.com/privacy), [Google retention](https://policies.google.com/technologies/retention), [notification permission](https://developer.android.com/develop/ui/compose/notifications/notification-permission), [Play audience](https://support.google.com/googleplay/android-developer/answer/9867159), [regional ICO rights](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/), [GitHub Pages data collection](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection), [GitHub privacy](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+Publishing the requested factual policy does not resolve these questions. Further evidence may require a policy change before game submission or paid-purchase activation.
