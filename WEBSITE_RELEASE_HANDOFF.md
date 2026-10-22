@@ -1,5 +1,7 @@
 # Website release handoff
 
+> **Current status — 22 October 2026:** the Kitchen Chaos privacy policy is finalized for publication on the owner’s instructions, with an 18+ audience, four current testing targets, integrated AdMob/UMP and Google Play Billing/Unity IAP, disabled checkout and Reset Progress limits. The 19–20 October draft, absent-Billing and unresolved-audience statements below are historical and superseded. Use [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) for the current publishing/activation checklist and unresolved evidence/legal questions, and [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md) for this update’s verification scope.
+
 > Historical website handoff from 19 October 2026. The site is now published through GitHub Pages. For the 20 October Unity privacy reconciliation, resolved integration facts and remaining approval/device checks, use [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) and [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md). Earlier statements below about an absent Unity handoff or pre-publication status are superseded.
 
 Prepared: **19 October 2026**. Website: **Legitimately Fishy Games**. Game: **Kitchen Chaos: Idle Cooking**.

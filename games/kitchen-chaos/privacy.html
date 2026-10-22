@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#051B3D">
-  <meta name="description" content="Draft privacy policy for the planned Kitchen Chaos: Idle Cooking Android closed test, including local saves, optional ads, notifications and privacy contact.">
-  <title>Privacy policy draft · Kitchen Chaos · Legitimately Fishy Games</title>
+  <meta name="description" content="Privacy policy for Kitchen Chaos: Idle Cooking, covering local saves, AdMob rewarded ads, privacy choices, Google Play purchases and support.">
+  <title>Privacy policy · Kitchen Chaos · Legitimately Fishy Games</title>
   <link rel="canonical" href="https://legitimatelyfishygames.github.io/games/kitchen-chaos/privacy.html">
   <link rel="icon" href="../../assets/brand/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="../../assets/brand/favicon.ico">
@@ -34,15 +34,8 @@
       <div class="page-intro">
         <p class="eyebrow">Kitchen Chaos: Idle Cooking</p>
         <h1>Privacy policy.</h1>
-        <p>A draft for the Android game being prepared for its first closed test.</p>
-        <p class="policy-meta">DRAFT · Reviewed <time datetime="2026-10-20">20 October 2026</time> · No effective date set</p>
-      </div>
-
-      <div class="review-notice" role="note" aria-labelledby="draft-heading">
-        <p class="eyebrow">Engineering handoff reviewed</p>
-        <h2 id="draft-heading">This policy is still a draft.</h2>
-        <p>This draft reflects the Unity engineering handoff of 19–20 October 2026, including source findings and a new validation Android App Bundle (AAB). That artifact verifies SDK packaging, not live network behavior, and is not assumed to be the final release candidate. Production advertising remains gated pending audience and territory decisions and Android device testing.</p>
-        <p><strong>Before using this as the final policy in Google Play or AdMob:</strong> review the final candidate and SDK data flows, test the implemented consent and device controls, decide audience and age handling, and resolve the remaining operational and legal details. The public contact below is confirmed. All outstanding checks are in <a href="../../PRIVACY_REVIEW.md">PRIVACY_REVIEW.md</a>.</p>
+        <p>How Kitchen Chaos: Idle Cooking handles information and the choices available to you.</p>
+        <p class="policy-meta">Effective and last updated: <time datetime="2026-10-22">22 October 2026</time></p>
       </div>
 
       <div class="legal-layout">
@@ -60,100 +53,105 @@
             <a href="#security">Security</a>
             <a href="#international">International processing</a>
             <a href="#rights">Your privacy rights</a>
-            <a href="#children">Children &amp; teenagers</a>
-            <a href="#future-payments">Future paid purchases</a>
+            <a href="#children">Adults only (18+)</a>
+            <a href="#future-payments">Purchases &amp; random chests</a>
             <a href="#website">This website</a>
             <a href="#contact">Contact &amp; updates</a>
           </nav>
         </aside>
 
-        <article class="legal-content" aria-label="Draft privacy policy for the intended closed test">
+        <article class="legal-content" aria-label="Kitchen Chaos privacy policy">
           <section id="scope">
             <h2>1. About this policy</h2>
-            <p><strong>Legitimately Fishy Games</strong> is developing <strong>Kitchen Chaos: Idle Cooking</strong> for Android distribution through Google Play. This draft covers preparation for its first closed test. Older sideloaded prototypes use a different package and separate app data.</p>
-            <p>The closed-test implementation includes local saves and offline progression, recipes, managers, random manager chests obtained with earned diamonds, optional rewarded advertising and optional local notifications. Basic play does not require watching an ad. <strong>No real-money purchases or Google Play Billing are active in this closed test.</strong> Future purchases are addressed in <a href="#future-payments">section 13</a>.</p>
-            <p>The handoff reports no developer-operated player account, cloud-save service, custom backend or authored endpoint receiving gameplay saves, and no separately introduced analytics or crash-upload service. Advertising SDK measurement and Android-managed backup are separate. These findings do not mean that no personal information is processed. The studio display name does not imply a registered company; any required legal identity and location disclosures remain under review.</p>
+            <p><strong>Legitimately Fishy Games</strong> provides <strong>Kitchen Chaos: Idle Cooking</strong> for Android through Google Play. This policy explains information handled by the game, its integrated services, support email and this studio website.</p>
+            <p>The Google Play target audience is <strong>adults aged 18 and over only</strong>. Closed testing currently targets the <strong>United Kingdom, Poland, United States and New Zealand</strong>. These are testing territories; they do not define or promise the territories of a future worldwide or public release.</p>
+            <p>The game includes local saves, offline progression, managers, random manager chests, optional rewarded advertising and optional local notifications. Google Play Billing through Unity In-App Purchasing (Unity IAP) is integrated for six diamond packs; <strong>real-money checkout is currently disabled pending product configuration and testing</strong>. See <a href="#future-payments">section 13</a> for purchase processing and random rewards.</p>
+            <p>There is <strong>no player account system or proprietary cloud-save service</strong>. You do not create a studio account to play. Local saves and third-party advertising, store and platform processing are separate: having no player account does not mean that no personal data is processed.</p>
           </section>
 
           <section id="local-data">
             <h2>2. Locally stored game data</h2>
-            <p>Readable local JSON saves maintain buildings, layouts and routes; stock, jobs and research; recipes; currencies and spending; sales, skills and ascension; managers and assignments; chest inventory, pity counters and committed random results; goals and claim ledgers; tokens, hints, tutorials; and offline timestamps and timers. Options are stored in a separate local JSON file, including notification preferences.</p>
-            <p>Local run, chest-opening and ad-attempt identifiers, reward reservations and transaction identifiers help prevent duplicate actions and rewards. The new ad bridge does not send game receipt identifiers as AdMob user identifiers or custom server-verification data. Runtime throughput samples are local presentation data with no authored telemetry sender; notebook search text is transient UI input with no authored persistence or upload found.</p>
-            <p>The save writer validates and atomically replaces the main save and keeps a recovery <code>.bak</code>. Migrations preserve immutable <code>.before-...json</code> copies, and New Game creates timestamped pre-reset backups. These copies support recovery and can retain historical progress and ledgers. See <a href="#retention">section 8</a> for reset and retention limits.</p>
-            <p>Android backup and device transfer have not been explicitly configured by authored rules in this work. Eligible files and SDK preferences may be included under operating-system defaults, account and device conditions. This is separate from developer cloud saves and is not a guarantee of cross-device recovery. Effective backup and restore behavior still needs device testing. See <a href="https://developer.android.com/identity/data/autobackup">Android's backup information</a>.</p>
+            <p>The game stores progress and settings locally on your device. Saves include production and recipes, currencies and spending, managers and assignments, chest inventory and results, rewards and claims, tutorials, and timestamps used for offline progress. Local identifiers and transaction records help prevent duplicate actions or rewards.</p>
+            <p>Save recovery files, migration copies and pre-reset backups can retain earlier progress. The game has a <strong>Reset Progress</strong> option; its limits are explained in <a href="#retention">section 8</a>.</p>
+            <p>Android may separately back up or transfer eligible app files and preferences, depending on your operating system, device, account and settings. This is separate from studio cloud saves. We do not guarantee backup availability, recovery or deletion of Android-managed backups. See <a href="https://developer.android.com/identity/data/autobackup">Android backup information</a>.</p>
           </section>
 
           <section id="notifications">
             <h2>3. Optional local notifications</h2>
-            <p>Quest reminders use <strong>Unity Mobile Notifications 2.4.3</strong>. They are <strong>optional and off by default</strong>. Enabling them requests Android notification permission. The implementation forecasts on an isolated local copy of game state, schedules a local quest reminder and cancels its reminder when disabled or when the game resumes. No remote push server, FCM or remote-push token integration was added.</p>
-            <p>Reminder text can include product names or masked unknown recipes and may appear on the lock screen. Notification permission is separate from advertising consent. Android's app notification settings also provide controls; wording varies by device. Permission denial or revocation, lock-screen display and reminder cancellation still require physical-device testing. See <a href="https://developer.android.com/develop/ui/compose/notifications/notification-permission">Android's notification permission guidance</a>.</p>
+            <p>Optional quest reminders use Unity Mobile Notifications and are off by default. If you enable them, Android may request notification permission. Reminders are scheduled locally; they do not require a studio push-notification server.</p>
+            <p>Reminder text may reveal game information on your lock screen. You can change notification preferences in the game and Android's app notification settings. Notification permission is separate from advertising consent.</p>
           </section>
 
           <section id="advertising">
-            <h2>4. Advertising and SDK information</h2>
-            <p>The integration uses <strong>Google Mobile Ads Unity 11.6.0</strong> for direct rewarded advertising and its UMP Unity bridge. The handoff reports <strong>Google Mobile Ads Android 25.5.0</strong> and <strong>Google UMP Android 4.0.0</strong> resolved and present in the new non-development validation AAB, based on manifest/dependency and derived-APK code inspection. This establishes packaging for that artifact, not final-candidate or live network behavior.</p>
-            <p>LevelPlay 9.5.1, its adapter and Android hook were removed from source inputs. The handoff reports the old ironSource/LevelPlay/Unity Ads class packages, native dependencies and startup components absent from that validation artifact. Historical APKs still contain the old stack. No extra mediation networks were introduced. Google advertising-ID, app-set-ID and measurement support remain; this is not an identifier-free or measurement-free integration.</p>
-            <p>Google's <a href="https://developers.google.com/admob/unity/privacy/play-data-disclosure">Mobile Ads data disclosure</a> describes collection and sharing of IP addresses (which may indicate general location), app and ad interactions, diagnostics, and device or account identifiers for advertising, measurement and fraud prevention. UMP contacts Google's consent/message services and processes consent-related state. The exact final configuration and provider disclosures must determine the app's final Data safety answers.</p>
-            <p>Watching ads is optional, but that does not establish that every SDK data flow is optional. Source inspection and simulated tests have not verified all startup traffic, actual identifier access, encrypted transport on every path, provider retention or international transfers. Delaying measurement initialization and checking ad permission in game code do not prove zero processing before consent.</p>
-            <p>Development Android builds and validation/test-inventory AABs use Google's official rewarded test unit; desktop TEST AD simulations are local tests. Ordinary production compilation selects the owner's rewarded unit, but <strong>production advertising remains blocked by an audience-review activation guard</strong> pending owner decisions and native-device validation. Test inventory is not evidence of zero personal-data processing. See <a href="https://developers.google.com/admob/unity/test-ads">Google's test ad guidance</a>.</p>
+            <h2>4. Advertising, diagnostics and SDK data</h2>
+            <p>The game integrates <strong>Google AdMob (Google Mobile Ads)</strong> for rewarded advertising and <strong>Google User Messaging Platform (UMP)</strong> for consent handling and applicable privacy choices. You can choose whether to watch a rewarded ad; basic play does not require watching one.</p>
+            <p>Google's <a href="https://developers.google.com/admob/unity/privacy/play-data-disclosure">Mobile Ads Unity data disclosure</a> describes automatic collection and sharing for advertising, analytics and fraud prevention. Depending on settings and applicable choices, information handled through AdMob includes:</p>
+            <ul>
+            <li><strong>App interactions:</strong> launches, taps, ad interactions and video views.</li>
+            <li><strong>Diagnostics:</strong> app and SDK performance information, such as launch times, hangs and energy use.</li>
+            <li><strong>Device or other IDs:</strong> advertising ID, app set ID and, where applicable, account-related identifiers on the device.</li>
+            <li><strong>Approximate location:</strong> the device's IP address can be used to estimate general location.</li>
+            </ul>
+            <p><strong>Crash logs may also be collected</strong> through platform diagnostics or SDK services to investigate errors and improve stability. Google describes crash reports among information processed through <a href="https://business.safety.google/privacy/google-services/play/">Google Play</a>. This is separate from claiming that every crash log is collected or shared by AdMob.</p>
+            <p>Optional ad viewing does not mean all SDK processing is optional or starts only when you watch an ad. UMP also communicates with Google's consent services and stores consent-related choices. Changing advertising choices does not necessarily stop diagnostics, fraud prevention or all other processing.</p>
           </section>
 
           <section id="providers">
-            <h2>5. Relevant service providers</h2>
-            <p>Google supplies the integrated advertising and consent services. Read <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for its advertising, measurement, service operation and abuse-prevention practices and applicable choices.</p>
-            <p>The game uses Unity 6000.4.6f1 and Unity Mobile Notifications 2.4.3. Unity External Dependency Manager 2.1.0 resolves Editor/build dependencies; it is not a standalone player analytics service. The handoff reports no newly introduced standalone analytics/crash upload, developer backend or remote push service. These findings do not establish every native component's live processing.</p>
-            <p>Gmail processes support messages (<a href="#support">section 7</a>), and GitHub Pages hosts this website (<a href="#website">section 14</a>). Android backup or transfer may separately process eligible app files and SDK preferences. Review the final build, provider/account configuration and device evidence before approving the final recipient and processing disclosures.</p>
+            <h2>5. Third-party services</h2>
+            <p>Google provides advertising, consent and Google Play store services. Read the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a> for its practices and controls.</p>
+            <p>The game is built with Unity and uses Unity IAP for its Google Play purchase integration and Unity Mobile Notifications for local reminders. Unity IAP data handling depends on the installed version and enabled services; disabled checkout alone does not establish that an SDK processes no information. See <a href="https://docs.unity.com/en-us/iap/privacy-and-consent">Unity IAP privacy and consent information</a> and the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity player privacy policy</a>.</p>
+            <p>Support messages are handled through Gmail, and this website is hosted on GitHub Pages. Third parties handle information under their applicable policies and settings. Local gameplay saves are not a studio-operated cloud-save database.</p>
           </section>
 
           <section id="choices">
             <h2>6. Advertising consent and privacy choices</h2>
-            <p>The implemented launch flow updates UMP consent information, presents a consent form when required, and checks Google's <code>CanRequestAds()</code> result before initializing, requesting or showing rewarded ads, subject also to the release activation guard. The game does not treat refusal as unrestricted permission for non-personalized ads. Partial choices and valid prior-session permission during errors remain SDK decisions; no game-owned consent cache replaces UMP.</p>
-            <p>In the game's <strong>Options</strong>, <strong>Ad privacy choices</strong> is visible and interactable when UMP requires a privacy-options entry point. It opens the SDK choices so players can revisit them. A privacy change invalidates cached and in-flight ads. Options also includes a browser link to this public policy. These controls are implemented in code; regional form presentation, conditional visibility, errors and the effect of changes still require Android phone testing with the final configuration. See <a href="https://developers.google.com/admob/unity/privacy">Google's UMP guidance</a>.</p>
-            <p>Ad failure, no-fill, offline conditions or closing an ad do not grant a reward. Rewards require the genuine client SDK reward callback, remain tied to their original saved destination and are granted at most once by the implemented transaction handling. There is no developer-operated server-side ad verification endpoint.</p>
-            <p>New Game and Restore defaults are separate from advertising privacy choices. They do not implement global deletion of Google or provider records. UMP and Google manage their own SDK preferences and network-side data; their exact storage and retention are not established by the handoff. Declining personalization may still involve other advertising processing. Android advertising-ID controls are additional device controls, not a substitute for applicable in-app choices.</p>
+            <p>The game uses UMP to update consent information and show applicable privacy messages. The advertising flow checks the SDK's permission to request ads. The message and choices available depend on your region and the applicable Google configuration.</p>
+            <p>Open <strong>Options → Ad privacy choices</strong> to revisit the UMP privacy form when Google requires that entry point. Options also links to this policy. Where processing relies on consent, you can change or withdraw the relevant consent through the available privacy controls. Refusing personalized advertising is not a promise that all advertising-related processing stops. See <a href="https://developers.google.com/admob/unity/privacy">Google's UMP guidance</a>.</p>
+            <p>Android's advertising settings may also let you reset or delete your advertising ID; availability and labels vary by device and Android version. These controls do not erase all provider-held records. Resetting game progress is separate from advertising privacy choices.</p>
           </section>
 
           <section id="support">
             <h2>7. Emails and privacy enquiries</h2>
-            <p>If you voluntarily email <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a>, the studio receives the sender address, message content, and any name, attachments or other information you include. These messages are handled through Gmail. We use information you send to respond to your enquiry, provide support or address a privacy request.</p>
-            <p>Please include only information relevant to the enquiry. Sending an email is separate from playing the game or reading this website. Google's privacy policy explains its handling of Gmail information. The studio's email retention criteria and request-handling procedure still need to be finalized; no fixed retention period is promised in this draft.</p>
+            <p>If you email <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a>, we receive your email address, message, and any name, attachments or other information you include. We use this information to respond, provide support and handle privacy requests. Gmail processes the correspondence under Google's applicable policies.</p>
+            <p>Please send only information needed for your enquiry. Do not send passwords or full payment-card details. Support correspondence is separate from local game saves and advertising data.</p>
           </section>
 
           <section id="retention">
-            <h2>8. Retention, backups and deletion</h2>
-            <p><strong>New Game resets progress; it is not complete deletion.</strong> It retains options and app-created backups, including a timestamped pre-reset copy. Ascension deliberately retains permanent progression, and Restore defaults changes settings. No comprehensive in-game Delete local data action has been implemented.</p>
-            <p>The recovery backup, migration copies and historical save/claim ledgers can remain until removed by app, operating-system or user actions. No age- or count-based backup pruning has been added and no fixed retention period is promised. Bounded retention and comprehensive local deletion remain planned work.</p>
-            <p>Android Clear storage, uninstall and operating-system backup controls are external controls. Their effects on retained or restored files depend on the device, OS, account and effective backup rules and still require testing. Do not assume uninstall erases every copy or that backup guarantees recovery. There is no developer-operated service for remotely accessing or erasing local saves.</p>
-            <p>Advertising privacy choices do not erase all provider-held information. Google's <a href="https://policies.google.com/technologies/retention">retention information</a> explains its provider-controlled practices. Support-email retention criteria, request procedures and provider coordination remain developer decisions; immediate or worldwide erasure is not promised.</p>
+            <h2>8. Retention, reset and deletion</h2>
+            <p><strong>Reset Progress resets gameplay progress; it is not a complete personal-data deletion tool.</strong> Settings and recovery, migration or pre-reset save copies may remain on the device. Reset Progress does not delete Google's, Unity's or other providers' records, store purchase history, support emails or Android-managed backups.</p>
+            <p>Local saves and backups can remain until removed by app, device or user actions. Android's Clear storage and uninstall controls can remove app data from the device, but their effects on backups, transfers and later restoration depend on the operating system and settings. We do not promise that uninstalling deletes every copy or that resetting restores or refunds purchases.</p>
+            <p>To request deletion of support correspondence or other personal information held by the studio, contact the email in <a href="#contact">section 15</a>. We can address information within our control, subject to applicable legal requirements and exceptions. We cannot remotely erase local saves through a proprietary cloud service because we do not operate one.</p>
+            <p>Third-party retention and deletion follow the relevant provider's practices and legal obligations, including <a href="https://policies.google.com/technologies/retention">Google's retention information</a>. There is no single retention period or deletion action covering local files, support messages, advertising records and store transactions.</p>
           </section>
 
           <section id="security">
             <h2>9. Security</h2>
-            <p>Local saves are readable JSON. Their unkeyed SHA-256 corruption check is not encryption or protection against deliberate modification. Validation and atomic save replacement help with file integrity but are not a guarantee of security. Inspection of game code and a validation artifact has not verified every SDK network path or transmission protection. No storage or transmission method can be guaranteed completely secure.</p>
+            <p>Local saves are readable files, not an encrypted vault. Save validation and recovery mechanisms help with integrity and recovery, but do not guarantee protection against access or modification. No storage or transmission method is completely secure.</p>
           </section>
 
           <section id="international">
             <h2>10. International processing</h2>
-            <p>Google describes processing on servers in multiple countries, potentially outside a user's country, in its <a href="https://policies.google.com/privacy#datatransfers">data transfers information</a>. This is relevant to the integrated advertising and consent services and to enquiries handled through Gmail.</p>
-            <p><strong>To confirm:</strong> the developer's location, release regions, final providers, transfer arrangements and any required safeguards or disclosures. This draft does not promise a particular storage country or a transfer mechanism for the whole app.</p>
+            <p>Google, Unity, GitHub and their infrastructure may process information outside your country. Processing locations and applicable safeguards depend on the service and its arrangements; the closed-test country list is not a promise that data stays in those countries. See the providers' linked privacy policies, including <a href="https://policies.google.com/privacy#datatransfers">Google's data-transfer information</a>.</p>
           </section>
 
           <section id="rights">
             <h2>11. Your privacy rights</h2>
-            <p>Depending on your location and applicable law, you may have rights to request access, correction, deletion or a copy of personal information, restrict or object to processing, or withdraw consent where processing relies on it. You may also have a right to complain to the relevant data protection authority. Conditions and exceptions can apply; the <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/">ICO's individual rights guidance</a> is one regional reference.</p>
-            <p>To ask a question or make a request, email <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a>. Describe the request and information concerned. Any identity check should be proportionate to the request. Provider-held data may also require using the provider's controls or contact routes. The applicable legal grounds, regional rights, response process and limits of studio access remain subject to final review.</p>
+            <p>Depending on your location and applicable law, you may have rights to access, correct, delete or receive a copy of personal information; restrict or object to processing; withdraw consent where processing relies on it; or complain to a data-protection authority. Conditions and exceptions may apply.</p>
+            <p>Email <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a> with your request and the information concerned. We may need enough information to verify and respond to the request. Requests concerning provider-controlled data may also need the provider's privacy controls or request process. A request does not guarantee deletion of data outside the studio's control.</p>
           </section>
 
           <section id="children">
-            <h2>12. Children and teenagers</h2>
-            <p>The proposed audience includes ages 13–15, 16–17 and adults, with broad international availability. <strong>Final age groups, countries and treatment of users below the applicable consent age or of unknown age remain unresolved.</strong> There is no age screen, birth-date collection or verified-adult status in the current implementation.</p>
-            <p>Development defaults request teen advertising treatment and a T ad-content cap; UMP's separate under-consent flag is false by default. These settings do not establish that every regional teenage audience is correctly classified. Production advertising remains gated pending audience review. A minimum age of 13 is not a universal legal consent threshold or assurance of worldwide compliance. Review the relevant <a href="https://support.google.com/googleplay/android-developer/answer/9867159">Google Play audience guidance</a>, regional requirements and any required parental involvement before release activation.</p>
+            <h2>12. Adults only (18+)</h2>
+            <p>Kitchen Chaos is intended for <strong>adults aged 18 and over only</strong>, matching its Google Play target-audience setting. It is not directed at children or teenagers under 18. A target-audience setting is not verification of every player's age.</p>
+            <p>If you believe a person under 18 has provided personal information to the studio, contact us so we can investigate and address information within our control. This does not promise that we can identify or erase all records held independently by providers.</p>
           </section>
 
           <section id="future-payments">
-            <h2>13. Future production purchases</h2>
-            <p><strong>The closed test has no real-money purchasing or Google Play Billing.</strong> Earned diamonds can buy existing random manager chests and other game items. Release UI omits diamond-pack prices and paid checkout controls; development-only TEST FREE packs are test tools, not payments. No money is charged and no Play purchase token is handled.</p>
-            <p>Google Play Billing diamond packs, purchased diamonds usable for random manager chests, purchase verification, fulfilment, recovery and refunds are a separate future milestone. No real-purchase restoration guarantee exists today. Before payments are activated, review actual transaction processing, retention, audience and territory restrictions, purchase controls and indirect paid-random-reward disclosures. Existing odds/contents UI does not establish certified probabilities or legal approval for paid random rewards.</p>
+            <h2>13. Diamond purchases and random manager chests</h2>
+            <!-- PURCHASE ACTIVATION: replace the current-status paragraph below when real-money checkout is enabled; review actual SDK/transaction flows and Data safety before activation. -->
+            <p><strong>Current purchase status (22 October 2026):</strong> Google Play Billing / Unity IAP is integrated for <strong>six diamond packs</strong>. Real-money checkout is currently disabled pending Google Play product configuration and testing. Integration does not mean paid purchases are currently available.</p>
+            <p><strong>When purchases are enabled:</strong> optional diamond-pack payments are processed through Google Play using Unity IAP. Google handles payment details under its policies. The purchase integration handles purchase information such as product identifiers, transaction or order identifiers, purchase tokens or receipts, and purchase status to process transactions, grant diamonds and prevent duplicate fulfilment. Store transaction records and local fulfilment records are separate from advertising choices and may remain after Reset Progress.</p>
+            <p>Players can spend diamonds on <strong>random manager chests</strong>. Once paid packs are enabled, purchased diamonds can also be used for those chests. Google Play requires reward odds to be clearly disclosed in advance of, and close to, purchases leading to randomized items. <strong>Applicable reward-odds disclosures must be available before paid purchases are activated.</strong> This policy does not certify the game's odds or replace the required in-game disclosure. See <a href="https://support.google.com/googleplay/android-developer/answer/9858738">Google Play's payments policy</a>.</p>
           </section>
 
           <section id="website">
@@ -164,9 +162,8 @@
 
           <section id="contact">
             <h2>15. Contact and policy updates</h2>
-            <p><strong>Developer/studio:</strong> Legitimately Fishy Games<br><strong>Public privacy contact:</strong> <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a></p>
-            <p>This contact is available for support and privacy enquiries. Additional legal identity or business details required for publication must be confirmed rather than invented.</p>
-            <p>The date above records this draft's review, not a release or effective date. The policy must be reconciled with the final Android candidate and configuration and approved before it becomes a final statement. It should be reviewed when SDKs, data practices, audience or release scope change. An effective date and any required process for notifying material changes will be set when the final policy is approved.</p>
+            <p><strong>Developer/studio:</strong> Legitimately Fishy Games<br><strong>Public support and privacy contact:</strong> <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a></p>
+            <p>We will update this page when information-handling practices change and revise the date above. Where required, material changes will also be communicated through an appropriate notice. The current purchase-status wording in section 13 must be updated when real-money checkout is enabled.</p>
           </section>
         </article>
       </div>
