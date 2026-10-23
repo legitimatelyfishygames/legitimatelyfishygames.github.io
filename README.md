@@ -2,9 +2,9 @@
 
 A static website for **Legitimately Fishy Games** and **Kitchen Chaos: Idle Cooking**, using HTML, shared CSS and minimal vanilla JavaScript. No build step, package manager, paid service or backend is needed.
 
-The game is under development and preparing for its first **closed test**. There is no supplied public Google Play destination. The privacy contact is **mati4193.004@gmail.com**.
+The first closed-test build **0.36.1 (43)** is ready for submission. There is no supplied public Google Play destination. The privacy contact is **mati4193.004@gmail.com**.
 
-**The privacy policy was finalized for publication on 22 October 2026** using the owner-confirmed facts and official provider documentation. It covers an 18+ audience, the current four testing territories, integrated AdMob/UMP and Billing, disabled checkout, local saves and Reset Progress limitations. [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) records unresolved evidence/legal questions and the purchase-activation checklist; this website edit does not certify the game build or Play Console declarations. See [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md) for verification scope.
+**The policy was updated on 23 October 2026 for the exact closed-test build.** Native Google Mobile Ads/UMP, advertising permissions and active ad/consent paths are excluded; rewarded ads and checkout are disabled. Billing 9/BILLING permission remain with no purchase connection. Managed SDK local property reads remain; startup-path findings do not prove zero traffic across the whole build. Audience 18+; territories UK, Poland, US and New Zealand. [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) records Data safety questions and exact future activation wording. See [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md) for verification scope.
 
 ## Website root and structure
 
@@ -48,8 +48,8 @@ A local server may show its own error screen for missing addresses. Open `/404.h
 
 Edit the HTML directly. Keep the homepage and game page consistent with the actual app, its handoff and the current release milestone.
 
-- **Closed testing:** adults 18+ only; UK, Poland, US and New Zealand are current testing targets, not a final public-release list. Local saves, earned diamonds/random manager chests, optional local notifications and AdMob/UMP are integrated.
-- **Purchases:** Google Play Billing / Unity IAP is integrated for six diamond packs. Real-money checkout is disabled pending product configuration and testing. Before activation, verify purchase/SDK data handling, reward odds and the Data safety form, and replace the dated disabled-checkout paragraph in policy section 13.
+- **Closed testing:** adults 18+ only; UK, Poland, US and New Zealand are current testing targets, not a final public-release list. Local saves, earned diamonds/random manager chests and optional local notifications remain. Rewarded ads are disabled; native Mobile Ads and UMP and active consent paths are excluded.
+- **Purchases:** Google Play Billing 9/BILLING permission remain but checkout is disabled and no purchase connection occurs. Six paid diamond packs are planned for a later update. Before activation, verify purchase/SDK data handling, reward odds and the Data safety form, and replace the dated disabled-checkout paragraph in policy section 13.
 - Keep the development/closed-test status until it changes. Add a store link only when the actual valid destination is supplied. Do not invent a release date, review, download count, cloud save or player account.
 - Recheck the privacy policy when app SDKs, backups, purchases, audience, providers or consent controls change. A source audit of the older Unity project does not prove the final APK's behavior.
 - To add another game, create `games/<game-slug>/index.html`, reuse the shared CSS and JavaScript, and add its own accurate privacy information and navigation.
@@ -96,5 +96,5 @@ Clone the **existing** repository into a separate folder using GitHub Desktop or
 - Review website policies against the current game and SDK configuration during each publishing cycle; update any new gaps before submission.
 - Follow [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) for remaining legal/operational questions and device/SDK checks.
 - Match the policy and Google Play Data safety, ads, audience and content-rating declarations to the distributed build.
-- At checkout activation, replace policy section 13's dated disabled-checkout paragraph and verify the conditional transaction disclosure, SDK version/configuration and reward odds.
+- Before advertising or checkout activation, follow the exact section-by-section wording changes and evidence checks in PRIVACY_REVIEW.md, including Data safety and reward odds.
 - Verify the exact public HTTPS policy URL after deployment and the in-game link on Android.
