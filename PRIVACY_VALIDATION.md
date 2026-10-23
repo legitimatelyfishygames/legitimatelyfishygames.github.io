@@ -1,22 +1,9 @@
-# Privacy website validation — 22 October 2026
+# Closed-test website validation — 23 October 2026
 
-The policy was updated on the owner's instructions using current owner-confirmed features and official Google/Unity documentation. The pre-edit public policy returned HTTP 200 and visibly contained the outdated draft. Source baseline: studio main commit 8648147723ff5c50815db853b5fd9e28f122854e.
+Scope: policy, game page, homepage and developer documentation for **0.36.1 (43)**. Baseline studio main: `0e9d034fb7935818b556dd7f932e7fd4a4444730`.
 
-## Scope
+The owner supplied exact signed-AAB facts. No game repository, Unity game, AAB or Console declarations were inspected or changed. Whole-build network silence is not established. See [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) for unresolved Data safety/privacy questions and exact activation wording.
 
-- Policy, homepage/game privacy and payment references, README, review checklist and historical handoff status are updated together. Branding, CSS, scripts and hosting configuration are retained.
-- The GitHub connector reports Lukek631, so it is excluded from publication. The browser user-navigation menu explicitly identifies **legitimatelyfishygames** and the repository is studio-owned. Publication uses that browser session only. No credentials were changed and no other account, fork or game repository is used.
-- The source clone is anonymous with Git credential helpers disabled. No push credentials are needed for local preparation.
-- Local structural/content and responsive browser checks are recorded outside the published tree in the task's preview directory. Publication success must be confirmed by the Pages deployment and the exact public HTTPS policy content, not merely an uploaded commit.
+Checks cover HTML structure, local links/fragments/ARIA, current-build statements, shared JavaScript syntax and Git whitespace. Browser review checks readable policy/game pages with retained branding/navigation. Publication verification compares anonymous public HTTPS responses byte-for-byte with reviewed policy, game and homepage source. The receipt is retained outside the published tree in the workspace preview folder. A commit alone is not deployment verification.
 
-## Checks completed before publication
-
-- Structural audit: four HTML pages, 111 local references and 35 IDs; no nesting, duplicate-ID, broken-local-link or ARIA-target errors.
-- Shared navigation JavaScript syntax and Git whitespace checks passed.
-- Browser layout at 320, 390, 768 and 1280 CSS pixels: no horizontal overflow; all 15 policy sections present. The eager brand image loaded; lazy footer imagery was not treated as a failed request.
-- Mobile menu opened and closed with Escape (aria-expanded true then false); browser warning/error log was empty.
-- Public policy draft was inspected before editing. Revised public content and HTTP response are checked after publication.
-
-## Limits
-
-No game build, Android device, actual SDK network traffic, Play Console, AdMob configuration, Unity account or mailbox was inspected. This update does not certify legal compliance, reward probabilities or actual Console Data safety answers. Remaining questions and activation-specific wording are in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md). Earlier validation records describe historical work and do not establish this revision's behavior.
+Publication uses only `legitimatelyfishygames/legitimatelyfishygames.github.io` and the signed-in studio browser session. No alternate account or fork is used. GitHub Pages configuration is retained.

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#051B3D">
-  <meta name="description" content="Privacy policy for Kitchen Chaos: Idle Cooking, covering local saves, AdMob rewarded ads, privacy choices, Google Play purchases and support.">
+  <meta name="description" content="Privacy policy for Kitchen Chaos: Idle Cooking, for closed-test version 0.36.1 (43), covering local saves, disabled ads and checkout, platform services and support.">
   <title>Privacy policy · Kitchen Chaos · Legitimately Fishy Games</title>
   <link rel="canonical" href="https://legitimatelyfishygames.github.io/games/kitchen-chaos/privacy.html">
   <link rel="icon" href="../../assets/brand/favicon.svg" type="image/svg+xml">
@@ -34,8 +34,8 @@
       <div class="page-intro">
         <p class="eyebrow">Kitchen Chaos: Idle Cooking</p>
         <h1>Privacy policy.</h1>
-        <p>How Kitchen Chaos: Idle Cooking handles information and the choices available to you.</p>
-        <p class="policy-meta">Effective and last updated: <time datetime="2026-10-22">22 October 2026</time></p>
+        <p>Privacy information for the first Google Play closed-test build: version 0.36.1 (43).</p>
+        <p class="policy-meta">Effective and last updated: <time datetime="2026-10-23">23 October 2026</time></p>
       </div>
 
       <div class="legal-layout">
@@ -63,10 +63,10 @@
         <article class="legal-content" aria-label="Kitchen Chaos privacy policy">
           <section id="scope">
             <h2>1. About this policy</h2>
-            <p><strong>Legitimately Fishy Games</strong> provides <strong>Kitchen Chaos: Idle Cooking</strong> for Android through Google Play. This policy explains information handled by the game, its integrated services, support email and this studio website.</p>
-            <p>The Google Play target audience is <strong>adults aged 18 and over only</strong>. Closed testing currently targets the <strong>United Kingdom, Poland, United States and New Zealand</strong>. These are testing territories; they do not define or promise the territories of a future worldwide or public release.</p>
-            <p>The game includes local saves, offline progression, managers, random manager chests, optional rewarded advertising and optional local notifications. Google Play Billing through Unity In-App Purchasing (Unity IAP) is integrated for six diamond packs; <strong>real-money checkout is currently disabled pending product configuration and testing</strong>. See <a href="#future-payments">section 13</a> for purchase processing and random rewards.</p>
-            <p>There is <strong>no player account system or proprietary cloud-save service</strong>. You do not create a studio account to play. Local saves and third-party advertising, store and platform processing are separate: having no player account does not mean that no personal data is processed.</p>
+            <p><strong>Legitimately Fishy Games</strong> develops <strong>Kitchen Chaos: Idle Cooking</strong> for Android through Google Play. This policy covers the first closed-test release, <strong>version 0.36.1, version code 43</strong>, package <code>com.legitimatelyfishygames.kitchenchaos</code>, prepared for submission. It does not describe planned commercial features as currently available.</p>
+            <p>The intended audience is <strong>adults aged 18 and over only</strong>. Closed-test territories are the <strong>United Kingdom, Poland, United States and New Zealand</strong>. This does not promise future public availability or a public release date.</p>
+            <p>The current build retains gameplay, local saves and local progression, including offline progression, managers and random manager chests using earned diamonds. <strong>Rewarded advertisements and real-money checkout are disabled.</strong> Native Google Mobile Ads and UMP, advertising permissions and active advertising/consent initialization paths are excluded. Google Play Billing 9 and its BILLING permission remain packaged, but no purchase connection occurs. Future advertising and purchases are described separately in sections 4, 6 and 13.</p>
+            <p>There is <strong>no player account system or proprietary cloud-save service</strong>. You do not create a studio account to play. Local saves, SDK processing, Android/Google Play services, support correspondence and this website have different information-handling practices; having no player account does not establish that no personal data is processed.</p>
           </section>
 
           <section id="local-data">
@@ -83,31 +83,26 @@
           </section>
 
           <section id="advertising">
-            <h2>4. Advertising, diagnostics and SDK data</h2>
-            <p>The game integrates <strong>Google AdMob (Google Mobile Ads)</strong> for rewarded advertising and <strong>Google User Messaging Platform (UMP)</strong> for consent handling and applicable privacy choices. You can choose whether to watch a rewarded ad; basic play does not require watching one.</p>
-            <p>Google's <a href="https://developers.google.com/admob/unity/privacy/play-data-disclosure">Mobile Ads Unity data disclosure</a> describes automatic collection and sharing for advertising, analytics and fraud prevention. Depending on settings and applicable choices, information handled through AdMob includes:</p>
-            <ul>
-            <li><strong>App interactions:</strong> launches, taps, ad interactions and video views.</li>
-            <li><strong>Diagnostics:</strong> app and SDK performance information, such as launch times, hangs and energy use.</li>
-            <li><strong>Device or other IDs:</strong> advertising ID, app set ID and, where applicable, account-related identifiers on the device.</li>
-            <li><strong>Approximate location:</strong> the device's IP address can be used to estimate general location.</li>
-            </ul>
-            <p><strong>Crash logs may also be collected</strong> through platform diagnostics or SDK services to investigate errors and improve stability. Google describes crash reports among information processed through <a href="https://business.safety.google/privacy/google-services/play/">Google Play</a>. This is separate from claiming that every crash log is collected or shared by AdMob.</p>
-            <p>Optional ad viewing does not mean all SDK processing is optional or starts only when you watch an ad. UMP also communicates with Google's consent services and stores consent-related choices. Changing advertising choices does not necessarily stop diagnostics, fraud prevention or all other processing.</p>
+            <h2>4. Current SDK processing and future advertising</h2>
+            <!-- ADS ACTIVATION: replace the current-build paragraphs here and in sections 1 and 6 before enabling advertising; reconcile Data safety. -->
+            <p><strong>Current closed test — 0.36.1 (43):</strong> rewarded ads are disabled. Native Google Mobile Ads and Google User Messaging Platform (UMP), advertising permissions and active ad/consent initialization paths are excluded. This build does not offer rewarded ad viewing or an operational UMP consent flow.</p>
+            <p>Managed SDK code still reads some device and app properties locally. The build audit identified no active off-device transmission in the startup paths it examined. <strong>Complete absence of network traffic across the distributed build was not independently established.</strong> These findings do not support a blanket claim that no information is collected or transmitted, or that all remaining SDK code is inactive.</p>
+            <p>Android and Google Play may separately process store, device, security or diagnostic information under their settings and policies, including possible crash reports. This is distinct from asserting that this game sends crash logs to a particular SDK or studio service. See <a href="https://business.safety.google/privacy/google-services/play/">Google Play data use</a>.</p>
+            <p><strong>Planned later update:</strong> optional rewarded advertising may be introduced with appropriate notices and privacy controls. If Google Mobile Ads and UMP are introduced, the actual SDK versions and configuration will determine the data handled and consent requirements. Google's <a href="https://developers.google.com/admob/unity/privacy/play-data-disclosure">Mobile Ads disclosure</a> describes advertising-related app interactions, diagnostics, device or other IDs, and IP-derived approximate location. This describes a possible future integration, not active advertising collection in build 43. We will update this policy before introducing those features.</p>
           </section>
 
           <section id="providers">
             <h2>5. Third-party services</h2>
-            <p>Google provides advertising, consent and Google Play store services. Read the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a> for its practices and controls.</p>
-            <p>The game is built with Unity and uses Unity IAP for its Google Play purchase integration and Unity Mobile Notifications for local reminders. Unity IAP data handling depends on the installed version and enabled services; disabled checkout alone does not establish that an SDK processes no information. See <a href="https://docs.unity.com/en-us/iap/privacy-and-consent">Unity IAP privacy and consent information</a> and the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity player privacy policy</a>.</p>
-            <p>Support messages are handled through Gmail, and this website is hosted on GitHub Pages. Third parties handle information under their applicable policies and settings. Local gameplay saves are not a studio-operated cloud-save database.</p>
+            <p>Google Play distributes the game, and Android/Google services may provide platform diagnostics, backup or device transfer depending on settings. Google Play Billing 9 and the BILLING permission remain in the build, but checkout is disabled and no purchase connection occurs. Read the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Native Google advertising and UMP services are excluded from this closed-test AAB.</p>
+            <p>The game is built with Unity and retains managed SDK code, including its Unity IAP purchase integration, and Unity Mobile Notifications for local reminders. Local device/app-property reads remain; the limited startup audit does not establish every component's behavior across all execution paths. Unity IAP processing depends on package version and enabled services. See <a href="https://docs.unity.com/en-us/iap/privacy-and-consent">Unity IAP privacy information</a> and the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity player privacy policy</a>. Inclusion of an SDK or a provider-policy link is not proof of active transmission to that provider.</p>
+            <p>Support messages are handled through Gmail, and this website is hosted on GitHub Pages. Their processing is separate from playing the game. Local gameplay saves are not a studio-operated cloud-save database.</p>
           </section>
 
           <section id="choices">
-            <h2>6. Advertising consent and privacy choices</h2>
-            <p>The game uses UMP to update consent information and show applicable privacy messages. The advertising flow checks the SDK's permission to request ads. The message and choices available depend on your region and the applicable Google configuration.</p>
-            <p>Open <strong>Options → Ad privacy choices</strong> to revisit the UMP privacy form when Google requires that entry point. Options also links to this policy. Where processing relies on consent, you can change or withdraw the relevant consent through the available privacy controls. Refusing personalized advertising is not a promise that all advertising-related processing stops. See <a href="https://developers.google.com/admob/unity/privacy">Google's UMP guidance</a>.</p>
-            <p>Android's advertising settings may also let you reset or delete your advertising ID; availability and labels vary by device and Android version. These controls do not erase all provider-held records. Resetting game progress is separate from advertising privacy choices.</p>
+            <h2>6. Current privacy choices and future consent controls</h2>
+            <p><strong>UMP consent is not operational in closed-test build 43.</strong> No advertising consent form or functioning UMP “Ad privacy choices” control is promised for this release. Advertising is disabled; a consent choice is not needed to unlock basic gameplay in this build.</p>
+            <p>You can manage local notification permissions through Android settings, manage device storage and backup settings, and contact the studio about information it holds. Reset Progress has the limits in section 8. These controls do not erase all platform or provider records.</p>
+            <p><strong>Before advertising is introduced in a later update,</strong> we will update this policy and provide appropriate notices and applicable consent/privacy controls. If UMP is used, the release must support applicable messages, ad-request eligibility checks and a way to revisit privacy options when required. Where processing relies on consent, applicable controls must allow changing or withdrawing it. See <a href="https://developers.google.com/admob/unity/privacy">Google's UMP guidance</a>. This is a future-release requirement, not a description of the current no-ads build.</p>
           </section>
 
           <section id="support">
@@ -121,7 +116,7 @@
             <p><strong>Reset Progress resets gameplay progress; it is not a complete personal-data deletion tool.</strong> Settings and recovery, migration or pre-reset save copies may remain on the device. Reset Progress does not delete Google's, Unity's or other providers' records, store purchase history, support emails or Android-managed backups.</p>
             <p>Local saves and backups can remain until removed by app, device or user actions. Android's Clear storage and uninstall controls can remove app data from the device, but their effects on backups, transfers and later restoration depend on the operating system and settings. We do not promise that uninstalling deletes every copy or that resetting restores or refunds purchases.</p>
             <p>To request deletion of support correspondence or other personal information held by the studio, contact the email in <a href="#contact">section 15</a>. We can address information within our control, subject to applicable legal requirements and exceptions. We cannot remotely erase local saves through a proprietary cloud service because we do not operate one.</p>
-            <p>Third-party retention and deletion follow the relevant provider's practices and legal obligations, including <a href="https://policies.google.com/technologies/retention">Google's retention information</a>. There is no single retention period or deletion action covering local files, support messages, advertising records and store transactions.</p>
+            <p>Third-party retention and deletion follow the relevant provider's practices and legal obligations, including <a href="https://policies.google.com/technologies/retention">Google's retention information</a>. There is no single retention period or deletion action covering local files, support messages and any applicable provider records. Advertising and purchase records would require separate review if those features are introduced.</p>
           </section>
 
           <section id="security">
@@ -147,11 +142,11 @@
           </section>
 
           <section id="future-payments">
-            <h2>13. Diamond purchases and random manager chests</h2>
-            <!-- PURCHASE ACTIVATION: replace the current-status paragraph below when real-money checkout is enabled; review actual SDK/transaction flows and Data safety before activation. -->
-            <p><strong>Current purchase status (22 October 2026):</strong> Google Play Billing / Unity IAP is integrated for <strong>six diamond packs</strong>. Real-money checkout is currently disabled pending Google Play product configuration and testing. Integration does not mean paid purchases are currently available.</p>
-            <p><strong>When purchases are enabled:</strong> optional diamond-pack payments are processed through Google Play using Unity IAP. Google handles payment details under its policies. The purchase integration handles purchase information such as product identifiers, transaction or order identifiers, purchase tokens or receipts, and purchase status to process transactions, grant diamonds and prevent duplicate fulfilment. Store transaction records and local fulfilment records are separate from advertising choices and may remain after Reset Progress.</p>
-            <p>Players can spend diamonds on <strong>random manager chests</strong>. Once paid packs are enabled, purchased diamonds can also be used for those chests. Google Play requires reward odds to be clearly disclosed in advance of, and close to, purchases leading to randomized items. <strong>Applicable reward-odds disclosures must be available before paid purchases are activated.</strong> This policy does not certify the game's odds or replace the required in-game disclosure. See <a href="https://support.google.com/googleplay/android-developer/answer/9858738">Google Play's payments policy</a>.</p>
+            <h2>13. Current earned diamonds and future paid purchases</h2>
+            <!-- PURCHASE ACTIVATION: replace the current-status paragraph and verify every conditional transaction claim before enabling checkout. -->
+            <p><strong>Current purchase status — 0.36.1 (43), 23 October 2026:</strong> Google Play Billing 9 and the BILLING permission are retained, but <strong>real-money checkout is disabled and no purchase connection occurs</strong>. Paid diamond packs are not available in this closed test. Players can use earned diamonds for random manager chests.</p>
+            <p><strong>Planned later update:</strong> six paid diamond packs are planned through Google Play and Unity IAP. If enabled, Google will handle payments under its policies, and the actual purchase integration may handle product identifiers, transaction/order identifiers, purchase tokens or receipts, and purchase status for fulfilment and duplicate prevention. We will verify fields, recipients and retention and update this policy before activation. This is not a statement that build 43 currently sends purchase records.</p>
+            <p>Once paid packs are enabled, purchased diamonds are planned to be usable for random manager chests. Applicable reward odds must be disclosed in advance of, and close to, purchases leading to randomized items. This policy does not certify odds or replace required in-game disclosures. Store transaction and fulfilment records may remain after Reset Progress when purchases exist. See <a href="https://support.google.com/googleplay/android-developer/answer/9858738">Google Play's payments policy</a>.</p>
           </section>
 
           <section id="website">
@@ -163,7 +158,7 @@
           <section id="contact">
             <h2>15. Contact and policy updates</h2>
             <p><strong>Developer/studio:</strong> Legitimately Fishy Games<br><strong>Public support and privacy contact:</strong> <a href="mailto:mati4193.004@gmail.com">mati4193.004@gmail.com</a></p>
-            <p>We will update this page when information-handling practices change and revise the date above. Where required, material changes will also be communicated through an appropriate notice. The current purchase-status wording in section 13 must be updated when real-money checkout is enabled.</p>
+            <p>We will update this page when information-handling practices change and revise the date above. Where required, material changes will also be communicated through an appropriate notice. Before advertising or purchases are activated, the current-build statements in sections 1, 4, 5, 6 and 13 will be revised to reflect actual processing, notices and controls, along with this date.</p>
           </section>
         </article>
       </div>
