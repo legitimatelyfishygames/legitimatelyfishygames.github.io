@@ -419,6 +419,10 @@ body { font-synthesis: none; }
 .studio-facts .eyebrow { font-size: 12px; }
 .studio-facts > p:not(.eyebrow), .studio-copy p:not(.eyebrow) { font-size: 16px; line-height: 1.6; }
 .studio-facts > p.facts-title { font: italic 900 32px/1.12 var(--heading); color: var(--cream); }
+.social-section { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; padding: clamp(24px, 4vw, 40px); border: 1px solid var(--line); border-radius: 24px; background: var(--panel); }
+.social-section .eyebrow { margin-bottom: 12px; }
+.social-section h2 + p { margin-top: 12px; color: var(--muted); }
+.social-links { display: flex; flex-wrap: wrap; gap: 16px; }
 .privacy-strip > div { font-size: 16px; }
 .privacy-strip small { font-size: 14px; line-height: 1.6; }
 .privacy-strip .text-link { font-size: 14px; }
@@ -429,6 +433,8 @@ body { font-synthesis: none; }
 .footer-wordmark > span { color: var(--orange); }
 .footer-links { font-size: 14px; gap: 24px; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.footer-social { flex-wrap: wrap; gap: 8px; }
+.footer-social a { justify-content: center; min-width: 48px; min-height: 48px; padding-inline: 8px; }
 .game-hero { gap: 48px; padding-block: 48px 64px; min-height: 620px; }
 .back-link { font-size: 14px; min-height: 44px; }
 .game-hero .eyebrow { font-size: 12px; }
@@ -526,6 +532,7 @@ body { font-synthesis: none; }
   .not-found > p br { display: none; }
 }
 @media (max-width: 580px) {
+  .social-links { display: grid; width: 100%; gap: 14px; }
   .brand { padding: 8px; gap: 12px; margin-left: -8px; }
   .brand-art { width: 64px; flex-basis: 64px; }
   .brand-logo { aspect-ratio: 1110 / 750; }
