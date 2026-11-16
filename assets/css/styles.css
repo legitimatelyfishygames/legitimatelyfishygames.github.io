@@ -454,6 +454,7 @@ body { font-synthesis: none; }
 .milestone .tiny-label { font-size: 12px; }
 .milestone ul, .milestone > p:not(.tiny-label) { font-size: 16px; line-height: 1.6; }
 .legal-content { font-size: 16px; line-height: 1.65; }
+.legal-content code { overflow-wrap: anywhere; }
 .legal-content h2, .legal-content h3, .review-notice h2, .review-notice h3 { font-family: var(--body); font-weight: 700; font-style: normal; line-height: 1.3; }
 .legal-content h2 { font-size: 24px; }
 .legal-content h3 { font-size: 20px; }
