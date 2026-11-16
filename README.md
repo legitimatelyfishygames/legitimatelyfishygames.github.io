@@ -2,9 +2,9 @@
 
 A static website for **Legitimately Fishy Games** and **Kitchen Chaos: Idle Cooking**, using HTML, shared CSS and minimal vanilla JavaScript. No build step, package manager, paid service or backend is needed.
 
-The first closed-test build **0.36.1 (43)** is ready for submission. There is no supplied public Google Play destination. The privacy contact is **mati4193.004@gmail.com**.
+Kitchen Chaos is in Google Play closed alpha. The owner submitted update **0.39.0 (95)** on 16 November 2026, with changes in review at the last observation. Approval and availability of that update remain unverified. There is no supplied public Google Play destination. The existing privacy contact is listed in the published policy.
 
-**The policy was updated on 23 October 2026 for the exact closed-test build.** Native Google Mobile Ads/UMP, advertising permissions and active ad/consent paths are excluded; rewarded ads and checkout are disabled. Billing 9/BILLING permission remain with no purchase connection. Managed SDK local property reads remain; startup-path findings do not prove zero traffic across the whole build. Audience 18+; territories UK, Poland, US and New Zealand. [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) records Data safety questions and exact future activation wording. See [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md) for verification scope.
+**The policy revision is dated 16 November 2026.** It covers the current no-ads/no-checkout scope, tester enrolment and a forward-looking support/tester-record retention commitment. Native Google Mobile Ads/UMP, advertising permissions and active ad/consent paths are excluded. Billing 9/BILLING permission remain with no purchase connection. Managed SDK local property reads remain; startup-path findings do not prove zero traffic across the whole build. Audience is 18+ and test territories are UK, Poland, US and New Zealand. [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) records the current review and historical evidence. See [PRIVACY_VALIDATION.md](PRIVACY_VALIDATION.md) for verification scope.
 
 ## Website root and structure
 

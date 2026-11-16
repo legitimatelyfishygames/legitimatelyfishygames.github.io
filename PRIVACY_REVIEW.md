@@ -1,5 +1,22 @@
 # Kitchen Chaos closed-test privacy review and release checklist
 
+## Current review, 16 November 2026
+
+The owner submitted version 0.39.0 (95) to the existing Google Play Alpha closed test. The release chat observed changes in review and quick checks running, with managed publishing off. Approval and availability of this update are unverified.
+
+The release handoff at game commit `aba479308b0327485bfb4a2051835c18535abb61` reports successful signature, source and package checks on the owner-signed AAB. Ads and real-money checkout remain disabled. Native Google Mobile Ads, UMP and Advertising ID are excluded. Billing 9 remains without a purchase connection. There are no player accounts or proprietary cloud saves. New local gameplay features fit the existing local-save disclosures. Native network behavior across every path and exhaustive physical-device acceptance remain unverified.
+
+The website revision removes obsolete build 43 and first-submission wording. Policy sections 7 and 8 explain tester enrolment, the Google Play Console email list, provider correspondence, removal requests and the forward-looking retention commitment effective 16 November 2026. Historical handling and the complete access roster are unverified. The existing privacy contact is retained. No tester addresses or player records were copied or deleted.
+
+- [x] Review the website policy against the submitted update and signed-build handoff.
+- [x] Preserve the 18+ audience, four test territories, notification choices and reset/backup limits.
+- [x] Retain website-policy review before advertising, purchases or other data-handling changes.
+- [ ] Verify complete native/network and physical-device acceptance where required by the game release checklist.
+
+The dated review below is historical. Current public wording is in the three HTML pages. Publication evidence is retained in the workspace preview folder, outside the published tree.
+
+## Historical review, 23 October 2026
+
 Reviewed 23 October 2026 for **0.36.1 (43)**, package `com.legitimatelyfishygames.kitchenchaos`. Supersedes the 22 October active-AdMob/UMP description. Evidence: the owner's verified facts for the exact signed AAB; no independent game/build/network audit was performed here. No game repository, Unity files, AAB or Console settings were accessed or changed.
 
 ## Evidence and corrections
